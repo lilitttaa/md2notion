@@ -150,7 +150,7 @@ class NotionPageGenerator:
         else:
             raise ValueError(f"ast_node type {ast_node['type']} is not supported")
 
-    def _generate_list_block(self, child_nodes: List[dict]) -> list[dict]:
+    def _generate_list_block(self, child_nodes: List[dict]) -> List[dict]:
         return [
             block
             for node in child_nodes
