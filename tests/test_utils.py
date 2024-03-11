@@ -13,14 +13,14 @@ def test_is_dict_contain_dict():
     dict8 = {"a": 1, "c": {"d": 3, "e": 4}, "b": [1, 2]}
     dict9 = {"a": 1, "c": {"d": 3, "e": 4}, "b": [1, 2, 3, 4]}
     assert_is_dict_contain_dict(dict1, dict2)
-    with pytest.raises(Exception):
+    with pytest.raises(RuntimeError):
         assert_is_dict_contain_dict(dict1, dict3)
-    with pytest.raises(Exception):
+    with pytest.raises(RuntimeError):
         assert_is_dict_contain_dict(dict1, dict4)
-    with pytest.raises(Exception):
+    with pytest.raises(RuntimeError):
         assert_is_dict_contain_dict(dict1, dict5)
     assert_is_dict_contain_dict(dict1, dict6)
     assert_is_dict_contain_dict(dict1, dict7)
     assert_is_dict_contain_dict(dict1, dict8)
-    with pytest.raises(Exception):
+    with pytest.raises(RuntimeError):
         assert_is_dict_contain_dict(dict1, dict9)
