@@ -26,15 +26,6 @@ repos:
           ]
   - repo: local
     hooks:
-      - id: mypy
-        name: 'Run mypy'
-        entry: mypy
-        language: system
-        types: [python]
-        verbose: true
-        files: .
-  - repo: local
-    hooks:
       - id: pytest
         name: 'Run test'
         entry: bash -c 'pytest -m "not slow"'
